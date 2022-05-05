@@ -1,0 +1,60 @@
+@import "mainStyles";
+
+
+body{
+  background-color: black;
+}
+
+#titulos{
+  background-color: #b6141a;
+  border-radius: 0 0 15px 0;
+
+  .btn{
+    &:hover{
+      border-color: white;
+      background-color: transparent;
+      color: white;
+    }
+  }
+
+}
+
+#izquierda{
+  form{
+    background: $fancyBlack;
+    border-radius: 15px;
+    >div{
+      width: 70%;
+    }
+
+  }
+
+}
+
+
+
+#derecha{
+  #reservaciones{
+    border-radius: 15px;
+    background-color: $fancyBlack;
+
+    .form-group{
+      .invalid-feedback{
+        color: white;
+        border-radius: 5px;
+        background-color: $blackTransparent;
+
+      }
+    }
+
+  }
+}
+
+
+#tablaReservaciones{
+
+  tr, td{
+    font-family: $secondaryFont;
+  }
+
+}

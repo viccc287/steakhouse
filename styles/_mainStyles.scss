@@ -1,0 +1,355 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+
+@import "variables";
+
+
+@import "../bootstrap-icons/font/bootstrap-icons.css";
+
+@mixin perfectCentering{
+  justify-content: center;
+  align-items: center;
+}
+
+*{
+
+  font-family: $mainFont;
+}
+
+body{
+  background-color: $fancyBlack;
+}
+
+
+.navbar{
+  background-color: $blackTransparent;
+
+}
+
+.userImage{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.userImageOffCanvas{
+  width: 125px;
+  height: 125px;
+  cursor: revert;
+  object-fit: cover;
+}
+
+
+#reservarNav{
+  background-color: $buttonColor;
+  color: black;
+}
+
+.nav-link {
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  @include perfectCentering;
+
+  &:hover {
+    background-color: white !important;
+    color: black !important;
+  }
+  &.active{
+    border: 2px $whiteTransparent solid;
+  }
+
+}
+
+.offcanvas{
+  background-color: $fancyBlack;
+}
+
+
+#section1{
+  background-image: $background;
+  background-size: cover;
+  h1{
+    font-size: 4rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+}
+
+.darkenMask{
+  background-color: rgba(0,0,0,0.40);
+  min-height: 90vh;
+  .row{
+    min-height: inherit;
+  }
+}
+
+
+
+#section2{
+
+  min-height: 90vh;
+
+  .col-md-4{
+    min-height: 25vh;
+
+    .card{
+      height: 60vh;
+      border-radius: 10px;
+
+      .card-img-overlay{
+        padding: 20%;
+        text-align: center;
+      }
+
+      video{
+        border-radius: 10px;
+        height: inherit;
+        object-fit: cover;
+        filter: brightness(40%);
+      }
+    }
+  }
+
+  .btn{
+    border: 3px solid $buttonColor;
+    background-color: transparent;
+    color: white;
+    &:hover{
+
+      border: 3px solid white;
+      background-color: white;
+      color: black ;
+    }
+  }
+}
+
+#section3{
+  min-height: 100vh;
+  background-color: black;
+
+  .list-group-item{
+    padding: 0;
+    margin: 0;
+  }
+  .badge{
+    font-size: 0.8rem;
+    background-color: $fancyRed;
+  }
+
+  .carousel{
+    img{
+      border-radius: 15px;
+      object-fit: cover;
+      width: 75vw;
+      height: 50vh;
+    }
+
+  }
+
+
+}
+
+#userInfoOffCanvas, #logedInOffCanvas{
+
+  box-sizing: border-box;
+  p{
+    font-family: $secondaryFont;
+  }
+  a{
+    font-family: $secondaryFont;
+    background-color: transparent;
+    border: none;
+    color: $buttonColor;
+
+    &:hover{
+      cursor: pointer;
+      color: #0a53be;
+    }
+
+  }
+
+  button:not(.btn-close){
+    background: $buttonColor;
+    border: 3px solid $buttonColor;
+    &:hover{
+
+      border: 3px solid white;
+      background-color: white;
+      color: black ;
+    }
+  }
+
+}
+
+#registerModal{
+
+  .modal-header{
+    background: $orangeGradient;
+    border: none;
+  }
+
+  .modal-content {
+    background-color: $fancyBlack;
+    button[type=submit]{
+      background: $buttonColor;
+      border: 3px solid $buttonColor;
+      &:hover{
+        border: 3px solid white;
+        background-color: white;
+        color: black ;
+      }
+    }
+
+  }
+  .btn{
+    background-color: transparent;
+  }
+}
+
+#cambiarFotoModal{
+  .modal-header{
+    background: $orangeGradient;
+    border: none;
+    color: white;
+  }
+  .modal-content {
+    background-color: $fancyBlack;
+    color: white;
+  }
+}
+
+#historiaModal{
+
+  background-color: $blackTransparent;
+
+  .modal-header{
+    background: $redBlackGradient;
+    border: none;
+  }
+
+  .modal-content {
+    background-color: $fancyBlack;
+    p{
+      font-family: $secondaryFont;
+      font-size: 1.05rem;
+    }
+
+  }
+
+}
+
+footer{
+
+  i{
+    font-size: 1.5em;
+  }
+  p{
+    font-family: $secondaryFont;
+    font-size: 0.9em;
+  }
+}
+
+.invalid-feedback, .valid-feedback{
+  font-family: $secondaryFont;
+}
+
+#cerrarSesion{
+  background-color: $fancyRed !important;
+  border-color: $fancyRed !important;
+}
+
+#borrarCuenta{
+  &:hover{
+    cursor: pointer !important;
+  }
+}
+
+form input:not([type=button]), form input:not([type=submit]), form select, form select option{
+  font-family: $secondaryFont;
+}
+
+
+
+.nice-button{
+  cursor:pointer;
+  border: none;
+  color: white;
+  background-color: $buttonColor;
+  &:hover{
+    background-color: white;
+    color:black;
+  }
+}
+
+#fotoSubida{
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#drop_zone{
+  border: dashed 2px $buttonColor;
+}
+
+.divVerPassword{
+  border-radius: 0 5px 5px 0 !important;
+  cursor: pointer;
+  background-color: ghostwhite;
+
+}
+
+.secondaryFont{
+  font-family: $secondaryFont;
+}
+
+.buttonColor{
+  font-family: $mainFont;
+  border: none;
+  background-color: $buttonColor;
+  color: white;
+  &:hover{
+    background-color: white;
+    color:black;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #section1{
+    .darkenMask{
+      min-height: 50vh;
+    }
+  }
+
+  .carousel{
+    .col-md-4{
+      max-height: 30vh;
+      overflow: auto;
+
+    }
+  }
+
+}
+
+@media only screen and (max-height: 500px) {
+ .offcanvas-header{
+   p{
+     display: none;
+   }
+   div{
+     padding:0;
+   }
+  }
+  .offcanvas-title{
+      display: none;
+
+  }
+  .userImageOffCanvas{
+    display: none;
+  }
+}
